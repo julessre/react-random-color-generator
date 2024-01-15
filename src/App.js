@@ -6,7 +6,7 @@ const Button = styled.button`
   background-color: black;
   color: white;
   font-size: 20px;
-  padding: 10px 60px;
+  padding: 10px 80px;
   cursor: pointer;
   border-radius: 8px;
   margin: 10px 0px;
@@ -19,6 +19,9 @@ export default function App() {
     backgroundColor: textColor,
     fontSize: '20px',
     padding: '20px',
+    paddingTop: '40px',
+    paddingBottom: '40px',
+    transition: 'all 1s ease',
     display: 'inline-block',
   };
 
