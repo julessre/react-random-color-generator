@@ -13,8 +13,9 @@ const Button = styled.button`
 `;
 
 export default function App() {
-  const [color, setColor] = useState('');
+  const [textColor, setTextColor] = useState('');
   const generateColor = randomColor();
+  // const colorMessage = `Generated Color:${generateColor}`;
 
   return (
     <>
@@ -25,16 +26,16 @@ export default function App() {
       <Button
         onClick={() => {
           const generateColor = randomColor();
-          setColor(generateColor);
+          setTextColor(generateColor);
+          document.body.style.background = generateColor;
         }}
       >
         Generate
       </Button>
-      {generateColor && (
-        <div style={{ backgroundColor: { generateColor } }}>
-          Generated Color: {generateColor}
-        </div>
-      )}
+      {/* {generateColor && ( */}
+      <div style={{ backgroundColor: { textColor } }}>
+        Generated Color: {generateColor}
+      </div>
     </>
   );
 }
