@@ -14,28 +14,31 @@ const Button = styled.button`
 
 export default function App() {
   const [textColor, setTextColor] = useState('');
-  const generateColor = randomColor();
-  // const colorMessage = `Generated Color:${generateColor}`;
+  const generateColor = String(randomColor());
+  const divStyle = {
+    backgroundColor: textColor,
+    fontSize: '20px',
+    padding: '20px',
+    display: 'inline-block',
+  };
 
   return (
     <>
       <h1>React Random Color Generator</h1>
-      <br />
-      <p>Click on the button below and create a random color.</p>
+      <p style={{ fontSize: '20px' }}>
+        Click on the button below and create a random color.
+      </p>
       <br />
       <Button
         onClick={() => {
-          const generateColor = randomColor();
           setTextColor(generateColor);
-          document.body.style.background = generateColor;
         }}
       >
         Generate
       </Button>
-      {/* {generateColor && ( */}
-      <div style={{ backgroundColor: { textColor } }}>
-        Generated Color: {generateColor}
-      </div>
+      <br />
+      <br />
+      <div style={divStyle}>Generated Color: {generateColor}</div>
     </>
   );
 }
