@@ -10,7 +10,7 @@ This application will show a random color when a button is clicked:
 - [x] Create a headline with 'React Random Color Generator'
 - [x] Create an explanation, what the button will do
 - [x] Create a button with text 'Generate'
-- [ ] Apply CSS Styling for button
+- [x] Apply CSS Styling for button
 - [x] Find a library to generate hex code
 - [x] Import the library to App.js
 - [x] Import useState from React
