@@ -16,13 +16,14 @@ export default function App() {
   const [textColor, setTextColor] = useState('');
   const generateColor = String(randomColor());
   const divStyle = {
-    backgroundColor: textColor,
+    backgroundColor: generateColor,
     fontSize: '20px',
     padding: '20px',
     paddingTop: '40px',
     paddingBottom: '40px',
-    // transition: 'all 0.5s ease',
+    transition: 'all 0.5s ease',
     display: 'inline-block',
+    border: textColor,
   };
 
   return (
